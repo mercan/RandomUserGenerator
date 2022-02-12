@@ -1,0 +1,283 @@
+{
+  "tags": ["Generate"],
+  "query": {
+    "type": "object",
+    "properties": {
+      "gender": {
+        "type": "string",
+        "enum": ["male", "female"]
+      },
+      "country": {
+        "type": "string"
+      }
+    }
+  },
+  "response": {
+    "200": {
+      "type": "object",
+      "description": "Successful response",
+      "properties": {
+        "statusCode": {
+          "type": "number",
+          "format": "integer",
+          "default": 200
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "gender": {
+              "type": "string",
+              "enum": ["male", "female"]
+            },
+            "name": {
+              "type": "object",
+              "properties": {
+                "fullName": {
+                  "type": "string",
+                  "default": "İbrahim Can Mercan"
+                },
+                "firstName": {
+                  "type": "string",
+                  "default": "İbrahim Can"
+                },
+                "lastName": {
+                  "type": "string",
+                  "default": "Mercan"
+                }
+              }
+            },
+            "login": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "format": "integer",
+                  "default": 123456
+                },
+                "uid": {
+                  "type": "string",
+                  "default": "f6f6f6f6-f6f6-f6f6-f6f6-f6f6f6f6f6f6"
+                },
+                "username": {
+                  "type": "string",
+                  "default": "mercan"
+                },
+                "email": {
+                  "type": "string",
+                  "default": "imrcn77@gmail.com"
+                },
+                "password": {
+                  "type": "string",
+                  "default": "123456"
+                },
+                "passwordHash": {
+                  "type": "object",
+                  "properties": {
+                    "md5": {
+                      "type": "string",
+                      "default": "e10adc3949ba59abbe56e057f20f883e"
+                    },
+                    "sha1": {
+                      "type": "string",
+                      "default": "7c4a8d09ca3762af61e59520943dc26494f8941b"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "default": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
+                    },
+                    "sha512": {
+                      "type": "string",
+                      "default": "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413"
+                    }
+                  }
+                },
+                "phoneNumber": {
+                  "type": "string",
+                  "default": "+905055555555"
+                },
+                "userAgent": {
+                  "type": "string",
+                  "default": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36"
+                },
+                "role": {
+                  "type": "string",
+                  "enum": ["guest", "user", "administrator"],
+                  "default": "user"
+                }
+              }
+            },
+            "ipAddress": {
+              "type": "object",
+              "properties": {
+                "v4": {
+                  "type": "string",
+                  "default": "144.129.103.123"
+                },
+                "v6": {
+                  "type": "string",
+                  "default": "da00:39e3:b712:e324:0517:8ae6:f69a:f101"
+                }
+              }
+            },
+            "birthDate": {
+              "type": "object",
+              "properties": {
+                "fullDate": {
+                  "type": "string",
+                  "default": "1990-01-01T00:00:00.000Z"
+                },
+                "date": {
+                  "type": "string",
+                  "default": "1990-01-01"
+                },
+                "age": {
+                  "type": "number",
+                  "format": "integer",
+                  "default": 32
+                }
+              }
+            },
+            "registered": {
+              "type": "object",
+              "properties": {
+                "fullDate": {
+                  "type": "string",
+                  "default": "2019-01-01T00:00:00.000Z"
+                },
+                "date": {
+                  "type": "string",
+                  "default": "2019-01-01"
+                },
+                "age": {
+                  "type": "number",
+                  "format": "integer",
+                  "default": 3
+                }
+              }
+            },
+            "location": {
+              "type": "object",
+              "properties": {
+                "fullAddress": {
+                  "type": "string",
+                  "default": "296 Alnıaçık Drive Suite 102"
+                },
+                "street": {
+                  "type": "object",
+                  "properties": {
+                    "number": {
+                      "type": "number",
+                      "format": "integer",
+                      "default": 296
+                    },
+                    "name": {
+                      "type": "string",
+                      "default": "Alnıaçık Drive Suite 102"
+                    }
+                  }
+                },
+                "country": {
+                  "type": "string",
+                  "default": "Turkey"
+                },
+                "city": {
+                  "type": "string",
+                  "default": "Ankara"
+                },
+                "state": {
+                  "type": "string",
+                  "default": "Ankara"
+                },
+                "postalCode": {
+                  "type": "string",
+                  "default": "06600"
+                },
+                "coordinates": {
+                  "type": "object",
+                  "properties": {
+                    "latitude": {
+                      "type": "number",
+                      "format": "float",
+                      "default": 39.927
+                    },
+                    "longitude": {
+                      "type": "number",
+                      "format": "float",
+                      "default": 32.854
+                    }
+                  }
+                },
+                "timezone": {
+                  "type": "string",
+                  "default": "Europe/Istanbul"
+                }
+              }
+            },
+            "creditCard": {
+              "type": "object",
+              "properties": {
+                "number": {
+                  "type": "string",
+                  "default": "5189-8127-2103-0637"
+                },
+                "cvv": {
+                  "type": "number",
+                  "format": "integer",
+                  "default": 123
+                }
+              }
+            },
+            "blockchain": {
+              "type": "object",
+              "properties": {
+                "bitcoin": {
+                  "type": "string",
+                  "default": "1XtmZNLsarqo2KJEiM7c17wJQaJP"
+                },
+                "ethereum": {
+                  "type": "string",
+                  "default": "0xe6630919e09acbd10db5d3a13d769f5a9aa5a16c"
+                }
+              }
+            },
+            "company": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "default": "X Group"
+                }
+              }
+            },
+            "job": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "default": "Software Engineer"
+                },
+                "area": {
+                  "type": "string",
+                  "default": "Web"
+                }
+              }
+            },
+            "rating": {
+              "type": "number",
+              "format": "float",
+              "default": 4.6
+            },
+            "size": {
+              "type": "string",
+              "enum": ["mini", "small", "medium", "big", "large"]
+            },
+            "createdAt": {
+              "type": "string",
+              "default": "2022-02-12T00:00:00.000Z"
+            }
+          }
+        }
+      }
+    }
+  }
+}

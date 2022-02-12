@@ -1,0 +1,48 @@
+{
+  "tags": ["Generate"],
+  "response": {
+    "200": {
+      "type": "object",
+      "description": "Successful response",
+      "properties": {
+        "statusCode": {
+          "type": "number",
+          "format": "integer",
+          "default": 200
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "format": "integer",
+              "default": 123456
+            },
+            "uid": {
+              "type": "string",
+              "default": "f6f6f6f6-f6f6-f6f6-f6f6-f6f6f6f6f6f6"
+            },
+            "creditCard": {
+              "type": "object",
+              "properties": {
+                "number": {
+                  "type": "string",
+                  "default": "5189-8127-2103-0637"
+                },
+                "cvv": {
+                  "type": "number",
+                  "format": "integer",
+                  "default": 123
+                }
+              }
+            },
+            "createdAt": {
+              "type": "string",
+              "default": "2022-02-12T00:00:00.000Z"
+            }
+          }
+        }
+      }
+    }
+  }
+}

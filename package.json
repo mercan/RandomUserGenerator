@@ -1,0 +1,48 @@
+{
+  "name": "randomusergenerator",
+  "version": "1.0.0",
+  "main": "./src/server.js",
+  "license": "ISC",
+  "author": {
+    "name": "İbrahim Can Mercan",
+    "email": "imrcn77@gmail.com",
+    "linkedin": "www.linkedin.com/in/İbrahim/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mercan/RandomUserGenerator.git"
+  },
+  "scripts": {
+    "postinstall": "cp -r ./src/lib/faker/* ./node_modules/faker/",
+    "start": "npm run postinstall && NODE_ENV=production node ./src/server.js",
+    "start:dev": "npm run postinstall && NODE_ENV=development nodemon ./src/server.js",
+    "test": "NODE_ENV=test mocha"
+  },
+  "keywords": [
+    "fake",
+    "generator",
+    "faker",
+    "fakedata",
+    "fakeuser",
+    "fakeusergenerator"
+  ],
+  "dependencies": {
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
+    "faker": "^5.5.3",
+    "fastify": "^3.25.3",
+    "fastify-cors": "^6.0.2",
+    "fastify-helmet": "^6.0.0",
+    "fastify-swagger": "^4.15.0",
+    "mongoose": "^6.1.6",
+    "node-cron": "^3.0.0",
+    "winston": "^3.3.4",
+    "winston-daily-rotate-file": "^4.5.5"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.0"
+  },
+  "engines": {
+    "node": ">=16.3.0"
+  }
+}

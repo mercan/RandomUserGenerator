@@ -1,0 +1,92 @@
+{
+  "tags": ["Generate"],
+  "response": {
+    "200": {
+      "type": "object",
+      "description": "Successful response",
+      "properties": {
+        "statusCode": {
+          "type": "number",
+          "format": "integer",
+          "default": 200
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "format": "integer",
+              "default": 123456
+            },
+            "uid": {
+              "type": "string",
+              "default": "f6f6f6f6-f6f6-f6f6-f6f6-f6f6f6f6f6f6"
+            },
+            "location": {
+              "type": "object",
+              "properties": {
+                "fullAddress": {
+                  "type": "string",
+                  "default": "296 Alnıaçık Drive Suite 102"
+                },
+                "street": {
+                  "type": "object",
+                  "properties": {
+                    "number": {
+                      "type": "number",
+                      "format": "integer",
+                      "default": 296
+                    },
+                    "name": {
+                      "type": "string",
+                      "default": "Alnıaçık Drive Suite 102"
+                    }
+                  }
+                },
+                "country": {
+                  "type": "string",
+                  "default": "Turkey"
+                },
+                "city": {
+                  "type": "string",
+                  "default": "Ankara"
+                },
+                "state": {
+                  "type": "string",
+                  "default": "Ankara"
+                },
+                "postalCode": {
+                  "type": "string",
+                  "default": "06600"
+                },
+                "coordinates": {
+                  "type": "object",
+                  "properties": {
+                    "latitude": {
+                      "type": "number",
+                      "format": "float",
+                      "default": 39.927
+                    },
+                    "longitude": {
+                      "type": "number",
+                      "format": "float",
+                      "default": 32.854
+                    }
+                  }
+                },
+                "timezone": {
+                  "type": "string",
+                  "default": "Europe/Istanbul"
+                }
+              }
+            },
+            "createdAt": {
+              "type": "string",
+              "default": "2022-02-12T00:00:00.000Z"
+            }
+          }
+        }
+      }
+    }
+  }
+}
