@@ -13,19 +13,19 @@ Projeyi klonlayın
 Proje dizinine gidin
 
 ```bash
-  cd RandomUserGenerator
+ cd RandomUserGenerator
 ```
 
 Dockerfile build alın
 
-```docker
-    docker build -t RandomUserGenerator .
+```bash
+  docker build -t RandomUserGenerator .
 ```
 
 Dockerfile'ı çalıştırın (.env dosyasını yapılandırmayı unutmayınız)
 
-```docker
-    docker run --env-file ./.env -p 3000:3000 RandomUserGenerator
+```bash
+  docker run --env-file ./.env -p 3000:3000 RandomUserGenerator
 ```
 
 ## Ortam Değişkenleri
