@@ -16,16 +16,11 @@ Proje dizinine gidin
  cd RandomUserGenerator
 ```
 
-Dockerfile build alın
+Docker build alın ve çalıştırın (.env dosyasını yapılandırmayı unutmayınız)\
+Bilgisayarınızda docker yoksa buradan indirebilirsiniz [Docker İndir](https://docs.docker.com/get-docker/)\
 
 ```bash
-  docker build -t RandomUserGenerator .
-```
-
-Dockerfile'ı çalıştırın (.env dosyasını yapılandırmayı unutmayınız)
-
-```bash
-  docker run --env-file ./.env -p 3000:3000 RandomUserGenerator
+  docker-compose up
 ```
 
 ## Ortam Değişkenleri
