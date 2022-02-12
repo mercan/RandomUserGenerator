@@ -17,7 +17,7 @@ Proje dizinine gidin
 ```
 
 Docker build alın ve çalıştırın (.env dosyasını yapılandırmayı unutmayınız)\
-Bilgisayarınızda docker yoksa buradan indirebilirsiniz [Docker İndir](https://docs.docker.com/get-docker/)\
+Bilgisayarınızda docker yoksa buradan indirebilirsiniz [Docker İndir](https://docs.docker.com/get-docker/)
 
 ```bash
   docker-compose up
